@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>---</title>
+</head>
+<body>
+    <header class="barra1" >
+        <img alt="logo" class="icono" src="{{ url_for('static', filename='CoLiink.png') }}"/>
+        <div>
+            <a href="">Papers</a>
+            <section>
+                <a href="">Sign up</a>
+                <a href="">Login</a>
+            </section>
+        </div>  
+    </header>
+    <main>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Log In</h2> 
+                    <div class="icons">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+    
+                    </div>
+                    <p>Login with another account</p>
+                    <form class="form">
+                        <label>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <input type="email" placeholder="Mail">
+                        </label>
+                        <label>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input type="password" placeholder="Password">
+                        </label>
+                        <div class="ini">
+                            <a href="main-page" class="btn google">LogIn</a>
+                        </div>
+                       
+    
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+
+       <div>
+        <img src="{{ url_for('static', filename='Logo_negro.png') }}" alt=""> 
+       </div>
+
+    </main>
+    <section class="a barras">
+        <h2>Discover the subject you enjoy the most!</h2>
+        <p class="sub">Suggested search</p>
+        <div>
+            <button>AI</button>
+            <button>Web</button>
+            <button>Algorithms</button>
+            <button>Green Computing</button>
+            <button>Philosophy</button>
+            <button>Machine Learning</button>
+            <button>IOT</button>
+            <button>Informática</button>
+            <button>Cybersecurity</button>
+            <button>Quantum physics</button>
+            <button>Smart cities</button>
+            <button>Art</button>
+            <button>Medicine</button>
+            <button>Renewable energy</button>
+            <button>Cryptography </button>
+            <button>Neuroscience</button>
+        </div>
+    </section>
+    <section class="b barras">
+        <h2>Publish your work and find collaborators or sponsors!</h2>
+        <img class="img_colink" src="{{ url_for('static', filename='CoLiink.png') }}" alt=""> 
+    </section>  
+    <section class="quien">
+        <div>
+                <h2>Who is it addressed to?</h2>
+                <p>Anyone with an interest in research.</p>
+                <div class="form-information">
+                    <div class="form-information-childs">                        
+                        <li>Promote your work.</li>
+                    </div>
+                </div>
+                <div class="form-information">
+                    <div class="form-information-childs">
+                
+                        <li>Find sponsors!</li>publi
+                        
+                    </div>
+                </div>
+        </div>
+        <img class="img_anonimous" src="{{ url_for('static', filename='anonimo.png') }}" alt=""> 
+    </section>
+    <footer class="barra2">
+            <p>CodenHeimers |  2023</p>
+    </footer>    
+</body>
+</html>

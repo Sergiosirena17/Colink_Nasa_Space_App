@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}" />
+    <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='CoLiink.ico') }}" />
+    <script src="https://kit.fontawesome.com/3055f91a99.js"></script>
+    <call-us-selector phonesystem-url="https://1518.3cx.cloud" party="nasa"></call-us-selector>
+    
+    <title>Perfil CoLink</title>
+    <style>
+        
+    </style>
+</head>
+   
+<body>
+    <div id="callus-container">
+        <div class="root_YNRgH bubble_right_wsE1G"><!----> 
+            <button id="wplc-chat-button" aria-label="Live Chat &amp; Talk" title="" disabled="disabled" type="button" class="button__8DK8 minimized-button_EkBzy bubble_CZVd7">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.074 42.35" class="minimize-image_uj1BD">
+                <g data-name="Layer 2" transform="translate(-11.86 -14.678)">
+                    <path d="M27.041 53.253c-1.064-1.771-2.107-3.505-3.087-5.276-.352-.636-.583-.81-1.592-.794-3.331.035-3.326.035-4.38.027l-.549-.008c-3.594-.003-5.572-1.992-5.572-5.602V20.27c0-3.607 1.983-5.591 5.588-5.591h31.993c3.523 0 5.462 1.947 5.462 5.48.005 9.007.005 12.633 0 21.64a4.892 4.892 0 01-5.399 5.401h-.008l-5.515-.005c-6.442-.008-4.361-.018-8.483.021a1.099 1.099 0 00-.505.352c-1.059 1.71-2.067 3.45-3.074 5.192l-1.169 2.007c-.084.147-.179.292-.297.473l-1.161 1.79z">
+
+                    </path>
+                    <rect rx=".812" height="3.043" width="32.605" y="21.789" x="17.045">
+
+                    </rect>
+                    <rect rx=".812" height="3.043" width="32.605" y="29.228" x="17.045">
+
+                    </rect>
+                    <rect rx=".812" height="3.043" width="19.008" y="36.668" x="17.045"></rect></g></svg> <!---->
+            </button>
+        </div>
+    </div>
+    <header id="main-header">
+        <div style="display: flex;">
+            <nav>
+                <ul>
+                    <li>
+                        <img id="header-logo" src="{{ url_for('static', filename='CoLiink.png') }}" alt="SCINET"> 
+                    </li>
+                    <li>
+                        <div id="home">
+                            <span></span>
+                            <span class="fas fa-home" aria-hidden="true"></span>
+                            <a href="main-page">Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fas fa-user-friends" aria-hidden="true"></span>
+                            <span class="nav-item-text">My research</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fas fa-envelope" aria-hidden="true"></span>
+                            <span class="nav-item-text">Messaging</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fas fa-bell" aria-hidden="true"></span>
+                            <span class="nav-item-text">Notifications</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="selected"id="right-border">
+                            <img src="{{ url_for('static', filename='tourist.jpg') }}" alt="Profile picture">
+
+                            <span class="nav-item-text">    
+                                <a href="perfil.html">Me</a>
+                            </span>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="column">
+        <div class="perfil-container">
+            <div class="header">
+                <img src="{{ url_for('static', filename='tourist.jpg') }}" alt="Foto de perfil"/>
+                <div class="header-info">
+                    <div class="nombre">Jean Mark Nadeau</div>
+                    <div class="profesion">Back-End Developer</div>
+                </div>
+            </div>
+            <button id="editarBtn" class="boton">Modify profile</button>
+                <div class="boton none" id="editarForm">
+                    <form action="" method="">
+                        <label for="nombre">Name: </label>
+                        <input type="text" id="nombre" name="nombre" value="Juan Pérez">
+                        <label for="profesion">Profession:</label>
+                        <input type="text" id="profesion" name="profesion" value="Desarrollador Web">
+                        <!-- Puedes agregar más campos según lo necesario -->
+                        <input type="submit" value="Save Changes">
+                    </form>
+                </div>
+            <div class="resumen bloque">
+                <h2>Summary</h2>
+                <p>Web developer with more than 5 years of experience in technologies such as HTML, CSS and JavaScript. Passionate about creating innovative solutions and continuous improvement.</p>
+            </div>
+            <div class="experiencia bloque">
+                <h2>Work experience</h2>
+                <div class="item">
+                    <h3>Senior Web Developer</h3>
+                    <span>Company XYZ - 2021 - Present</span>
+                    <p>Responsible for leading web projects and coordinating development teams.</p>
+                </div>
+                <div class="item">
+                    <h3>Junior Web Developer</h3>
+                    <span>ABC Company - 2018 - 2021</span>
+                    <p>Development and maintenance of web applications for international clients.</p>
+                </div>
+            </div>
+            <div class="educacion bloque">
+                <h2>Education</h2>
+                <div class="item">
+                    <h3>Bachelor of Computer ScienceBachelor of Computer Science</h3>
+                    <span>City University - 2014 - 2018</span>
+                </div>
+            </div>
+            <div class="habilidades bloque ">
+                <h2>
+                    Skills</h2>
+                <ul class="puntos">
+                    <li>HTML, CSS and JavaScript</li>
+                    <li>React and Vue.js</li>
+                    <li>Backend development with Node.js</li>
+                    <li>SQL and NoSQL database</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="perfil-container">
+            <div class="publicaciones-container">
+                
+                
+                <button id="publicarBtn" class="boton">New Publication</button>
+                <div class="boton none" id="publicarForm">
+                    <form action="" method="post">
+                        <textarea name="contenido" rows="4" placeholder="What do you want to share?"></textarea>
+                        <input type="submit" value="Publicar">
+                        <div id="share-box">
+                            <div id="button-box">
+                                <button id="btn-picture">
+                                    <span class="fas fa-camera" aria-hidden="true"></span>
+                                </button>
+                                <button id="btn-video">
+                                    <span class="fas fa-video" aria-hidden="true"></span>
+                                </button>
+                                <button id="btn-document">
+                                    <span class="fas fa-file" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Ejemplo de publicaciones existentes -->
+                <div class="publicacion">
+                    <p>I just completed a new web project! I'm excited to share it with all of you.</p>
+                    <span>Published on October 5, 2023</span>
+                </div>
+                <div class="publicacion">
+                    <p>I'll be participating in a web development conference next week. Will anyone else attend?</p>
+                    <span>Published on October 1, 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('publicarBtn').addEventListener('click', function() {
+            var form = document.getElementById('publicarForm');
+            form.classList.toggle("none")
+        });
+    </script>
+
+    </div>
+    
+    <div class="sidebar">
+        <h2>Suggested Contacts</h2>
+        <div class="contacto">
+            <img src="{{ url_for('static', filename='girl.jpg') }}" alt="Foto de contacto 1"/>
+            <div class="contacto-info">
+                <span class="nav-item-text">    
+                    <a href="perfil.html">Maria López</a>
+                </span>
+                <span>Graphic Designer</span>
+            </div>
+        </div>
+        <div class="contacto">
+            <img src="{{ url_for('static', filename='man.jpg') }}" alt="Foto de contacto 2"/>
+            <div class="contacto-info">
+                <span class="nav-item-text">    
+                    <a href="perfil.html">Carlos Rodríguez</a>
+                </span>
+                <span>Marketing analyst</span>
+            </div>
+        </div>
+        <div class="contacto">
+            <img src="{{ url_for('static', filename='girl_2.jpg') }}" alt="Foto de contacto 3"/>
+            <div class="contacto-info">
+                <span class="nav-item-text">    
+                    <a href="perfil.html">Laura Martinez</a>
+                </span>
+                <span>Front end developer</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('editarBtn').addEventListener('click', function() {
+            var form = document.getElementById('editarForm');
+            form.classList.toggle("none")
+        });
+    </script>
+</body>
+</html>

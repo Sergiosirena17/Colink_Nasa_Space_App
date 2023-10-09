@@ -1,0 +1,598 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>CoLink</title>
+
+        <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='CoLiink.ico') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}" />
+
+        <script src="{{ url_for('static', filename='js.js') }}"></script>
+        <script src="https://kit.fontawesome.com/3055f91a99.js"></script>
+        <!--Use the below code snippet to provide real time updates to the live chat plugin without the need of copying and paste each time to your website when changes are made via PBX-->
+<call-us-selector phonesystem-url="https://1518.3cx.cloud" party="nasa"></call-us-selector>
+ 
+<!--Incase you don't want real time updates to the live chat plugin when options are changed, use the below code snippet. Please note that each time you change the settings you will need to copy and paste the snippet code to your website--> 
+<!--<call-us 
+phonesystem-url="https://1518.3cx.cloud" 
+style="position:fixed;font-size:16px;line-height:17px;z-index: 99999;--call-us-main-accent-color:#3397D4;--call-us-main-background-color:#FFFFFF;--call-us-plate-background-color:#373737;--call-us-plate-font-color:#E6E6E6;--call-us-main-font-color:#292929;--call-us-agent-bubble-color:#29292910;right: 20px; bottom: 20px;" 
+id="wp-live-chat-by-3CX" 
+minimized="true" 
+animation-style="slideup" 
+party="nasa" 
+minimized-style="bubbleright" 
+allow-call="true" 
+allow-video="false" 
+allow-soundnotifications="true" 
+enable-mute="true" 
+enable-onmobile="true" 
+offline-enabled="true" 
+enable="true" 
+ignore-queueownership="false" 
+authentication="none" 
+show-operator-actual-name="true" 
+aknowledge-received="true" 
+gdpr-enabled="false" 
+message-userinfo-format="both" 
+message-dateformat="both" 
+lang="browser" 
+button-icon-type="bubble" 
+greeting-visibility="none" 
+greeting-offline-visibility="none" 
+chat-delay="2000" 
+enable-direct-call="true" 
+enable-ga="false" 
+></call-us>--> 
+<script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header id="main-header">
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <img id="header-logo" src="{{ url_for('static', filename='CoLiink.png') }}" alt="SCINET"/> 
+                        </li>
+                        <li>
+                            <div id="home" class="selected">
+                                <span class="fas fa-home"></span>
+                                <span class="nav-item-text">Home</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-user-friends"></span>
+                                <span class="nav-item-text">My research</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-envelope"></span>
+                                <span class="nav-item-text">Messaging</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-bell"></span>
+                                <span class="nav-item-text">Notifications</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="right-border">
+                                <img
+                                    src="{{ url_for('static', filename='tourist.jpg') }}"
+                                    alt="Profile picture"
+                                />
+
+                                <span class="nav-item-text">    
+                                    <a href="home">Me</a>
+                                </span>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div>
+                    <img
+                        id="header-picture-menu"
+                        src="{{ url_for('static', filename='picture.jpeg') }}"
+                        alt="Profile picture"
+                    />
+                    <span id="header-picture-menu-bars">
+                        <span class="fas fa-bars"></span>
+                    </span>
+
+                    <div>
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="       Search"
+                            onfocus="toggleSearchInput()"
+                            onblur="toggleSearchInput()"
+                        />
+                        <span id="search-icon" class="fas fa-search"></span>
+                        <span id="search-button" class="fas fa-search"></span>
+                    </div>
+                    <span class="fas fa-comments"></span>
+                </div>
+            </div>
+        </header>
+        <!-- LOADING PAGE -->
+        <div id="loading-page">
+            <div>
+                <img src="{{ url_for('static', filename='Logo_negro.png') }}" alt="" />
+                <div id="dot-loader">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+            <!-- ADS -->
+
+            <!-- LEFT ASIDE -->
+            <div id="left-aside-wrapper">
+                <aside id="left-aside">
+                    <div id="profile-card">
+                        <div id="background"></div>
+                        <div id="profile-info">
+                            <img
+                                src="{{ url_for('static', filename='tourist.jpg') }}"
+                                alt="Profile picture"
+                            />
+                            <strong id="profile-name"
+                                >Jean Mark Nadeau</strong
+                            >
+                            <small>Back-End Developer</small>
+                        </div>
+                        <div id="profile-links">
+                            <a href="#">
+                                <span>
+                                    Who's viewed your profile
+                                </span>
+                                <span class="profile-number">
+                                    28
+                            </a>
+                        </div>
+                        <span>Sponsored by NASA</span>
+                        <a href="https://www.google.com/search?client=opera-gx&q=translate&sourceid=opera&ie=UTF-8&oe=UTF-8">
+                            <span></span>
+                            <span id="profile-premium">
+                                <span id="profile-square">■</span>¿Are you interested in NASA?</span
+                            >
+                        </a>
+                    </div>
+                    <div id="profile-groups">
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span>Recent</span>
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul class="group-list">
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>React Developers</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>javascript</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>python development</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>UCSP</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>IA Papers</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span class="group-title">Groups</span>
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span id="aaaa">React Developers</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>UCSP</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>AI Papers</span>
+                                </li>
+                            </ul>
+                            <div class="group-list">
+                                <a href="#">See all</a>
+                            </div>
+                        </section>
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span class="group-title">
+                                    Followed Hashtags</span
+                                >
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>AI</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>UCSP</span>
+                                </li>
+                            </ul>
+                            <a href="#">See all</a>
+                        </section>
+                        <a href="#">Discover more</a>
+                    </div>
+                </aside>
+            </div>
+            <!-- MAIN -->
+            <div id="main-wrapper">
+                <main id="main-section">
+                    <div id="share-box">
+                        <div id="button-box">
+                            <button id="btn-post">
+                                <span class="fas fa-edit"></span>
+                                <span id="btn-text">Start a post</span>
+                            </button>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <textarea id="text-input" placeholder="Escribe aquí tu publicacion."></textarea>
+                                    <h1 style="font-size: 15px;">Subir archivo PDF</h1>
+                                    <form id="upload-form" enctype="multipart/form-data">
+                                        <input type="file" id="file-input" accept=".pdf" />
+                                    </form>
+                                    <button id="save-button">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="link-box">
+                            <a href="#">Write an article</a>
+                            <span>on </span>
+                        </div>
+                    </div>
+                    <div id="feed-sort">
+                        <hr />
+                        <button>
+                            <span>Sort by:</span>
+                            <strong>Top</strong>
+                            <span class="fas fa-sort-down"></span>
+                        </button>
+                    </div>
+                    <article id="result" style="display: none;">
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="{{ url_for('static', filename='tourist.jpg') }}"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Nikolas Zuñiga Monroy</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Back-End Developer</span
+                                        >
+                                        <span>now</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p id="saved-text"></p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <img src="{{ url_for('static', filename='pdf.webp') }}" />
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+
+                                <span id="amount-info"
+                                    >0 <span>&nbsp;·&nbsp;</span> 0
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="{{ url_for('static', filename='example-person2.jpeg') }}"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Nikolas Zuñiga Monroy</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Web develover</span
+                                        >
+                                        <span>12h</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                <span>The Problem of Rationality in the Social World. A Lecture Delivered at the Faculty Club of Harvard University on April 13th, 1940</span>
+                                <br><br>The title is that of Alfred Schutz for a lecture he gave at the Harvard Faculty Club on the invitation of Joseph Schumpeter and Talcott Parsons. A shorter version of the lecture was published in 1943 by the British journal Economica (New Series, I, 1943, pp. 130-149), and reprinted in Alfred Schutz, Collected Papers, Vol. II, pp. 79–88 under the same title (although misdated as a lecture given in 1942).
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <a href="{{ url_for('static', filename='pdf.pdf') }}" download><img class="pdf" src="{{ url_for('static', filename='pdf.webp') }}" alt=""></a>
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span
+                                    id="heart-icon"
+                                    class="fas fa-heart"
+                                ></span>
+                                <span id="amount-info"
+                                    >23 <span>&nbsp;·&nbsp;</span> 4
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="{{ url_for('static', filename='girl.jpg') }}"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Anali Alejo</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span>Web Designer at SL Systems</span>
+                                        <span>16h</span>
+                                    </div>  
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                <span>The Problem of Rationality in the Social World. A Lecture Delivered at the Faculty Club of Harvard University on April 13th, 1940</span>
+                                <br><br>The title is that of Alfred Schutz for a lecture he gave at the Harvard Faculty Club on the invitation of Joseph Schumpeter and Talcott Parsons. A shorter version of the lecture was published in 1943 by the British journal Economica (New Series, I, 1943, pp. 130-149), and reprinted in Alfred Schutz, Collected Papers, Vol. II, pp. 79–88 under the same title (although misdated as a lecture given in 1942).
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <a href="{{ url_for('static', filename='pdf.pdf') }}" download><img class="pdf" src="{{ url_for('static', filename='pdf.webp') }}" alt=""></a>
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span id="amount-info"
+                                    >18 <span>&nbsp;·&nbsp;</span> 6
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+            <!-- RIGHT ASIDE -->
+            <aside id="right-aside">
+                <div id="rec-section">
+                    <div>
+                        <header>
+                            <span>Add to your feed</span>
+                            <span
+                                class="fas fa-info-circle"
+                                onmouseover="showRecommendationsInfo(this)"
+                                onmouseout="showRecommendationsInfo(this)"
+                            >
+                                <div id="float-info">
+                                    <span>
+                                        Follow things that interest you to
+                                        personalize your feed.
+                                    </span>
+                                    <a href="#">Learn more.</a>
+                                </div>
+                                <span>►</span>
+                                <div id="square"></div>
+                            </span>
+                        </header>
+                        <div>
+                            <div>
+                                <img src="{{ url_for('static', filename='nasa.png') }}" alt="" />
+                                <div>
+                                    <strong>NASA</strong>
+                                    <small>The National Aeronautics and Space Administration</small>
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                            <div>
+                                <img src="{{ url_for('static', filename='ucsp.png') }}" alt="" />
+                                <div>
+                                    <strong>#UCSP</strong>
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                            <div>
+                                <img src="{{ url_for('static', filename='elon.jpg') }}" alt="" />
+                                <div>
+                                    <strong>Elon Musk</strong>
+                                    <small
+                                        >The charismatic CEO of electric car maker Tesla and rocket manufacturer SpaceX.</small
+                                    >
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#">View all recommendations</a>
+                    </div>
+                </div>
+                <div id="linkedin-section">
+                    <footer>
+                        <ul>
+                            <li>About</li>
+                            <li>Help Center</li>
+                            <li>
+                                Privacy & Terms<span
+                                    class="fas fa-angle-down"
+                                ></span>
+                            </li>
+                            <li>Advertising</li>
+                            <li>
+                                Business Services
+                                <span class="fas fa-angle-down"></span>
+                            </li>
+                            <li>More</li>
+                        </ul>
+                    </footer>
+                </div>
+            </aside>
+        </div>
+    </body>
+</html>
